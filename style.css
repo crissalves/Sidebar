@@ -1,7 +1,70 @@
-:root {
-  --body-bg-color: #dce4e3;
-  --green: #18c29c;
-  --light-green: #8ed7c6;
-	--light-grey: #dce4e3;
-  --text-color: #084236;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Caprasimo", cursive;
+}
+
+body {
+  height: 100vh;
+  background-color: rgb(255, 255, 255);
+}
+
+nav.menu-lateral {
+  width: 80px;
+  height: 100%;
+  background-color: rgb(0, 0, 0);
+  padding: 40px 0 40px 1%;
+  box-shadow: 3px 0 0 aqua;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+nav.menu-lateral:hover {
+  width: 300px;
+}
+
+.btn-expandir {
+  width: 100%;
+  padding-left: 10px;
+}
+
+.btn-expandir > i {
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+ul {
+  height: 100%;
+  list-style-type: none;
+}
+
+ul li.item-menu {
+  transition: 0.3s;
+}
+ul li.item-menu:hover {
+  background: aqua;
+}
+
+ul li.item-menu a {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  padding: 20px 4%;
+  display: flex;
+  margin-bottom: 20px;
+  line-height: 40px;
+}
+
+ul li.item-menu a .txt-link {
+  margin-left: 40px;
+}
+
+ul li.item-menu a .icon > i {
+  font-size: 30px;
 }
