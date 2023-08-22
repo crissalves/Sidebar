@@ -7,15 +7,15 @@
 
 body {
   height: 100vh;
-  background-color: rgb(255, 255, 255);
+  background-color: black;
 }
 
 nav.menu-lateral {
   width: 80px;
   height: 100%;
-  background-color: rgb(0, 0, 0);
+  background-color: black;
   padding: 40px 0 40px 1%;
-  box-shadow: 3px 0 0 aqua;
+  box-shadow: 3px 0 0 blueviolet;
 
   position: fixed;
   top: 0;
@@ -24,7 +24,7 @@ nav.menu-lateral {
   transition: 0.3s;
 }
 
-nav.menu-lateral:hover {
+nav.menu-lateral.expandir {
   width: 300px;
 }
 
@@ -47,8 +47,13 @@ ul {
 ul li.item-menu {
   transition: 0.3s;
 }
+
+ul li.ativo {
+  background-color: blueviolet;
+}
+
 ul li.item-menu:hover {
-  background: aqua;
+  background: blueviolet;
 }
 
 ul li.item-menu a {
@@ -57,12 +62,18 @@ ul li.item-menu a {
   font-size: 20px;
   padding: 20px 4%;
   display: flex;
-  margin-bottom: 20px;
   line-height: 40px;
 }
 
 ul li.item-menu a .txt-link {
+  margin-left: 70px;
+  transition: 1s;
+  opacity: 0;
+}
+
+nav.menu-lateral.expandir .txt-link {
   margin-left: 40px;
+  opacity: 1;
 }
 
 ul li.item-menu a .icon > i {
